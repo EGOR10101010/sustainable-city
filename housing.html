@@ -1,36 +1,52 @@
 <!DOCTYPE html>
+<p><code>wrapAround: true</code></p>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Housing - Smart City</title>
     <link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.min.css">
 </head>
 <body>
     <header>
         <h1>Housing</h1>
     </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="cityplan.html">City Plan</a></li>
-            <li><a href="logistics.html">Logistics</a></li>
-            <li><a href="housing.html" class="active">Housing</a></li>
-            <li><a href="water.html">Water Resources</a></li>
-            <li><a href="workplaces.html">Workplaces</a></li>
-            <li><a href="energy.html">Sustainable Energy</a></li>
-            <li><a href="medical.html">Medical District</a></li>
-            <li><a href="entertainment.html">Entertainment</a></li>
-        </ul>
-    </nav>
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        
+        <!-- Dropdown for City Plan -->
+        <li class="dropdown">
+            <a href="cityplan.html">City Plan ▼</a>
+            <ul class="dropdown-menu">
+                <li><a href="logistics.html">Logistics</a></li>
+                <li><a href="housing.html">Housing</a></li>
+                <li><a href="water.html">Water Resources</a></li>
+                <li><a href="workplaces.html">Workplaces</a></li>
+                <li><a href="energy.html">Sustainable Energy</a></li>
+                <li><a href="medical.html">Medical District</a></li>
+                <li><a href="entertainment.html">Entertainment</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
     <main>
         <div class="container">
             <h2>Housing</h2>
             <p>Content about housing in the sustainable city plan will go here.</p>
         </div>
-    </main>
+		<div class="box"></div>
+		<div class="carousel" data-flickity='{ "wrapAround": true, "autoPlay": 3000, "cellAlign": "center" }'>
+			<div class="carousel-cell"><img src="image1.jpg" alt="Image 1"></div>
+			<div class="carousel-cell"><img src="image2.jpg" alt="Image 2"></div>
+			<div class="carousel-cell"><img src="image3.jpg" alt="Image 3"></div>
+		</div>
+		<div class="box"></div>
+	</main>
     <footer>
         <p>&copy; 2025 Yehor Korzun | Smart and Sustainable Urban Development</p>
     </footer>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.pkgd.min.js"></script>
 </body>
 </html>

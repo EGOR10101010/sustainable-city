@@ -121,3 +121,93 @@ footer {
 .dot:hover::after {
     display: block;
 }
+.carousel {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+
+.carousel-cell {
+    width: 60%; /* Each slide is 50% of the container */
+    text-align: center;
+}
+
+.carousel-cell img {
+    width: 100%;
+    transition: filter 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Blur and fade side images */
+.carousel-cell:not(.is-selected) img {
+    filter: blur(6px); /* Increase blur intensity if needed */
+    opacity: 0.4;
+}
+.box {
+    background: #f8f9fa;
+    padding: 15px;
+    margin-bottom: 20px; /* Space between divs */
+}
+/* General Navbar Styling */
+nav {
+    background: #2c3e50;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 12px 18px;
+    display: block;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    background: #1abc9c;
+    border-radius: 5px;
+}
+
+/* Dropdown Menu - Hidden by Default */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #34495e;
+    border-radius: 5px;
+    padding: 10px;
+    width: 450px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-menu {
+    display: flex;
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu li {
+    width: 30%;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.dropdown-menu li a {
+    padding: 10px 15px;
+    display: block;
+    color: white;
+    text-decoration: none;
+}
