@@ -82,63 +82,83 @@
 <div class="city-map">
     <img src="city_plan.png" alt="City Plan">
 
-    <!-- Logistics -->
-    <div class="dot" style="top: 30%; left: 40%;" data-url="logistics.html" data-info="Logistics: Transport & Supply Chain"></div>
+    <!-- Dots (Cleaned) -->
+    <div class="dot" style="top: 30%; left: 40%;" data-url="logistics.html" data-info="Logistics"></div>
+    <div class="dot" style="top: 50%; left: 60%;" data-url="housing.html" data-info="Housing"></div>
+    <div class="dot" style="top: 70%; left: 20%;" data-url="water.html" data-info="Water Resources"></div>
+    <div class="dot" style="top: 40%; left: 80%;" data-url="workplaces.html" data-info="Workplaces"></div>
+    <div class="dot" style="top: 60%; left: 30%;" data-url="energy.html" data-info="Sustainable Energy"></div>
+    <div class="dot" style="top: 50%; left: 50%;" data-url="medical.html" data-info="Medical District"></div>
+    <div class="dot" style="top: 20%; left: 70%;" data-url="entertainment.html" data-info="Entertainment"></div>
 
-    <!-- Housing -->
-    <div class="dot" style="top: 50%; left: 60%;" data-url="housing.html" data-info="Housing: Sustainable Living"></div>
-
-    <!-- Water Resources -->
-    <div class="dot" style="top: 70%; left: 20%;" data-url="water.html" data-info="Water Resources: Clean & Efficient"></div>
-
-    <!-- Workplaces -->
-    <div class="dot" style="top: 40%; left: 80%;" data-url="workplaces.html" data-info="Workplaces: Office & Industry"></div>
-
-    <!-- Sustainable Energy -->
-    <div class="dot" style="top: 60%; left: 30%;" data-url="energy.html" data-info="Sustainable Energy: Renewable Sources"></div>
-
-    <!-- Medical District -->
-    <div class="dot" style="top: 50%; left: 50%;" data-url="medical.html" data-info="Medical District: Hospitals & Clinics"></div>
-
-    <!-- Entertainment -->
-    <div class="dot" style="top: 20%; left: 70%;" data-url="entertainment.html" data-info="Entertainment: Shopping & Cinemas"></div>
-
-    <!-- Info Box for Mobile -->
+    <!-- Single Tooltip Box (Used for ALL Dots) -->
     <div id="dot-info-box" class="dot-info-box"></div>
 </div>
+
+
 
     </main>
     <footer>
         <p>&copy; 2025 Yehor Korzun | Smart and Sustainable Urban Development</p>
     </footer>
-    <script>
-    function redirectOrShowInfo(dot, url) {
-        // Check if the user is on a mobile device
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
         let isMobile = window.matchMedia("(max-width: 768px)").matches;
         let infoBox = document.getElementById("dot-info-box");
+        let lastClickedDot = null;
 
-        if (isMobile) {
-            // If clicked once, show the info box
-            if (dot.classList.contains("clicked")) {
-                window.location.href = url; // Redirect on second click
+        document.querySelectorAll(".dot").forEach(dot => {
+            let url = dot.getAttribute("data-url");
+            let infoText = dot.getAttribute("data-info");
+
+            if (!isMobile) {
+                // **Desktop: Hover shows text, click redirects**
+                dot.addEventListener("mouseenter", function () {
+                    showTooltip(dot, infoText);
+                });
+                dot.addEventListener("mouseleave", function () {
+                    hideTooltip();
+                });
+                dot.addEventListener("click", function () {
+                    hideTooltip();
+                    window.location.href = url; // Redirect immediately
+                });
+
             } else {
-                dot.classList.add("clicked");
-                infoBox.innerText = dot.getAttribute("data-info");
-                infoBox.style.display = "block";
-                infoBox.style.top = (dot.offsetTop - 40) + "px";
-                infoBox.style.left = dot.offsetLeft + "px";
+                // **Mobile: First tap shows text, second tap redirects**
+                dot.addEventListener("click", function () {
+                    if (lastClickedDot === dot) {
+                        hideTooltip();
+                        window.location.href = url; // Redirect on second tap
+                    } else {
+                        lastClickedDot = dot;
+                        showTooltip(dot, infoText);
 
-                // Hide info box after 2 seconds & reset click state
-                setTimeout(() => {
-                    infoBox.style.display = "none";
-                    dot.classList.remove("clicked");
-                }, 2000);
+                        // Hide tooltip if no second tap occurs within 2s
+                        setTimeout(() => {
+                            if (lastClickedDot === dot) {
+                                lastClickedDot = null;
+                                hideTooltip();
+                            }
+                        }, 2000);
+                    }
+                });
             }
-        } else {
-            // On desktop, redirect immediately
-            window.location.href = url;
+        });
+
+        // **Function to show tooltip**
+        function showTooltip(dot, text) {
+            infoBox.innerText = text;
+            infoBox.style.display = "block";
+            infoBox.style.top = (dot.offsetTop - 40) + "px";
+            infoBox.style.left = dot.offsetLeft + "px";
         }
-    }
+
+        // **Function to hide tooltip**
+        function hideTooltip() {
+            infoBox.style.display = "none";
+        }
+    });
 </script>
 </body>
 </html>

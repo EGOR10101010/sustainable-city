@@ -201,6 +201,7 @@ nav ul li a:hover {
     border-radius: 50%;
     cursor: pointer;
     transition: transform 0.2s, background 0.2s;
+    z-index: 10;
 }
 
 .dot:hover {
@@ -208,39 +209,26 @@ nav ul li a:hover {
     transform: scale(1.2);
 }
 
-/* Tooltip for Desktop */
-.dot::after {
-    content: attr(data-info);
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.75);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 14px;
-    white-space: nowrap;
-    display: none;
-}
-
-/* Show tooltip on hover (Desktop) */
-.dot:hover::after {
-    display: block;
-}
-
-/* Info Box for Mobile */
+/* Single Tooltip Box (For Both Mobile & Desktop) */
 .dot-info-box {
     display: none;
     position: absolute;
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, 0.85);
     color: white;
     padding: 8px 12px;
     border-radius: 5px;
     font-size: 14px;
     white-space: nowrap;
     text-align: center;
+    z-index: 20;
     top: -40px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+/* Disable hover tooltip on mobile */
+@media (max-width: 768px) {
+    .dot::after {
+        display: none !important;
+    }
 }
