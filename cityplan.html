@@ -80,25 +80,64 @@
             <p>Content about city plan in the sustainable city plan will go here.</p>
         </div>
         <div class="city-map">
-            <img src="city_plan.png" alt="City Plan">
-            <div class="dot" style="top: 30%; left: 40%;" onclick="location.href='logistics.html'"></div>
-            <div class="info-box" style="top: 20%; left: 40%;">Logistics: Transport & Supply Chain</div>
-            <div class="dot" style="top: 50%; left: 60%;" onclick="location.href='housing.html'"></div>
-            <div class="info-box" style="top: 40%; left: 60%;">Housing: Sustainable Living</div>
-            <div class="dot" style="top: 70%; left: 20%;" onclick="location.href='water.html'"></div>
-            <div class="info-box" style="top: 60%; left: 20%;">Water Resources: Clean & Efficient</div>
-            <div class="dot" style="top: 40%; left: 80%;" onclick="location.href='workplaces.html'"></div>
-            <div class="info-box" style="top: 30%; left: 80%;">Workplaces</div>
-            <div class="dot" style="top: 60%; left: 30%;" onclick="location.href='energy.html'"></div>
-            <div class="info-box" style="top: 50%; left: 30%;">Sustainable Resources of Energy</div>
-            <div class="dot" style="top: 50%; left: 50%;" onclick="location.href='medical.html'"></div>
-            <div class="info-box" style="top: 40%; left: 50%;">Medical District</div>
-            <div class="dot" style="top: 20%; left: 70%;" onclick="location.href='entertainment.html'"></div>
-            <div class="info-box" style="top: 10%; left: 70%;">Entertainment</div>
-        </div>
+    <img src="city_plan.png" alt="City Plan">
+
+    <!-- Logistics -->
+    <div class="dot" style="top: 30%; left: 40%;" onclick="redirectOrShowInfo(this, 'logistics.html')" data-info="Logistics: Transport & Supply Chain"></div>
+
+    <!-- Housing -->
+    <div class="dot" style="top: 50%; left: 60%;" onclick="redirectOrShowInfo(this, 'housing.html')" data-info="Housing: Sustainable Living"></div>
+
+    <!-- Water Resources -->
+    <div class="dot" style="top: 70%; left: 20%;" onclick="redirectOrShowInfo(this, 'water.html')" data-info="Water Resources: Clean & Efficient"></div>
+
+    <!-- Workplaces -->
+    <div class="dot" style="top: 40%; left: 80%;" onclick="redirectOrShowInfo(this, 'workplaces.html')" data-info="Workplaces: Office & Industry"></div>
+
+    <!-- Sustainable Energy -->
+    <div class="dot" style="top: 60%; left: 30%;" onclick="redirectOrShowInfo(this, 'energy.html')" data-info="Sustainable Energy: Renewable Sources"></div>
+
+    <!-- Medical District -->
+    <div class="dot" style="top: 50%; left: 50%;" onclick="redirectOrShowInfo(this, 'medical.html')" data-info="Medical District: Hospitals & Clinics"></div>
+
+    <!-- Entertainment -->
+    <div class="dot" style="top: 20%; left: 70%;" onclick="redirectOrShowInfo(this, 'entertainment.html')" data-info="Entertainment: Shopping & Cinemas"></div>
+
+    <!-- Info Box for Mobile -->
+    <div id="dot-info-box" class="dot-info-box"></div>
+</div>
     </main>
     <footer>
         <p>&copy; 2025 Yehor Korzun | Smart and Sustainable Urban Development</p>
     </footer>
+    <script>
+    function redirectOrShowInfo(dot, url) {
+        // Check if the user is on a mobile device
+        let isMobile = window.matchMedia("(max-width: 768px)").matches;
+        let infoBox = document.getElementById("dot-info-box");
+
+        if (isMobile) {
+            // If clicked once, show the info box
+            if (dot.classList.contains("clicked")) {
+                window.location.href = url; // Redirect on second click
+            } else {
+                dot.classList.add("clicked");
+                infoBox.innerText = dot.getAttribute("data-info");
+                infoBox.style.display = "block";
+                infoBox.style.top = (dot.offsetTop - 40) + "px";
+                infoBox.style.left = dot.offsetLeft + "px";
+
+                // Hide info box after 2 seconds & reset click state
+                setTimeout(() => {
+                    infoBox.style.display = "none";
+                    dot.classList.remove("clicked");
+                }, 2000);
+            }
+        } else {
+            // On desktop, redirect immediately
+            window.location.href = url;
+        }
+    }
+</script>
 </body>
 </html>

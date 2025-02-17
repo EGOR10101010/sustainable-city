@@ -211,3 +211,54 @@ nav ul li a:hover {
     color: white;
     text-decoration: none;
 }
+/* Dots Styling */
+.dot {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: red;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.dot:hover {
+    background: yellow;
+    transform: scale(1.2);
+}
+
+/* Tooltip for Desktop */
+.dot::after {
+    content: attr(data-info);
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    display: none;
+}
+
+.dot:hover::after {
+    display: block;
+}
+
+/* Info Box for Mobile */
+.dot-info-box {
+    display: none;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    text-align: center;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
