@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart and Sustainable Urban Development</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Smart and Sustainable Urban Development</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+
+            <!-- City Plan Dropdown with Click and Hover -->
+            <li class="dropdown">
+                <a href="cityplan.html" class="dropdown-toggle">City Plan ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="logistics.html">Logistics</a></li>
+                    <li><a href="housing.html">Housing</a></li>
+                    <li><a href="water.html">Water Resources</a></li>
+                    <li><a href="workplaces.html">Workplaces</a></li>
+                    <li><a href="energy.html">Sustainable Energy</a></li>
+                    <li><a href="medical.html">Medical District</a></li>
+                    <li><a href="entertainment.html">Entertainment</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Building a Sustainable Future</h2>
+            <p>Explore our vision for a self-sustaining urban environment.</p>
+            <a href="cityplan.html" class="btn">Explore the City Plan</a>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="container">
+            <h2>About the Project</h2>
+            <p>Our project aims to design a sustainable urban environment incorporating logistics, water resources, workplaces, housing, sustainable energy, medical districts, and entertainment.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Yehor Korzun | Smart and Sustainable Urban Development</p>
+    </footer>
+
+</body>
+</html>
