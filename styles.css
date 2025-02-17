@@ -102,25 +102,6 @@ footer {
     font-size: 16px;
     margin-top: 20px;
 }
-/* Tooltip Styles */
-.dot::after {
-    content: attr(data-tooltip); /* Gets text from data-tooltip attribute */
-    position: absolute;
-    bottom: 30px; /* Position above the dot */
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.75);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 14px;
-    white-space: nowrap;
-    display: none;
-}
-
-.dot:hover::after {
-    display: block;
-}
 .carousel {
     width: 100%;
     max-width: 800px;
@@ -243,6 +224,7 @@ nav ul li a:hover {
     display: none;
 }
 
+/* Show tooltip on hover (Desktop) */
 .dot:hover::after {
     display: block;
 }

@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<p><code>wrapAround: true</code></p>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -48,5 +47,14 @@
         <p>&copy; 2025 Yehor Korzun | Smart and Sustainable Urban Development</p>
     </footer>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.pkgd.min.js"></script>
+	<script>
+    var elem = document.querySelector('.carousel');
+    var flkty = new Flickity(elem, {
+        wrapAround: true, // Enables infinite scrolling
+        autoPlay: 5000,   // Auto-scrolls every 3s
+        cellAlign: 'center'
+    });
+</script>
+
 </body>
 </html>
