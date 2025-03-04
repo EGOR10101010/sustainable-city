@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medical Districts - Smart City</title>
     <link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.min.css">
 </head>
 <body>
     <header>
@@ -23,20 +24,98 @@
                 <li><a href="water.html">Water Resources</a></li>
                 <li><a href="workplaces.html">Workplaces</a></li>
                 <li><a href="energy.html">Sustainable Energy</a></li>
-                <li><a href="medical.html" class="active">Medical District</a></li>
+                <li><a href="medical.html" class="active">Security of Locals</a></li>
                 <li><a href="entertainment.html">Entertainment</a></li>
+				<li><a href="education.html">Education</a></li>
             </ul>
         </li>
+		<li><a href="survey.html">Survey Answers</a></li>
     </ul>
 </nav>
     <main>
         <div class="container">
             <h2>Medical Districts</h2>
-            <p>Content about medical districts in the sustainable city plan will go here.</p>
+
+<ul>
+    <li><b>Health clinics</b> – General medical services, check-ups, overall diagnosis, rehabilitation, with good equipment such as:
+        <ul>
+            <li>Laboratories for tests</li>
+            <li>Diagnostics</li>
+            <li>X-rays</li>
+            <li>MRIs</li>
+        </ul>
+    </li>
+    <li><b>Hospital</b> – Medical services, surgery rooms, labour rooms, ER, ICU (intensive care units), with educated doctors and staff.</li>
+    <li><b>Hospital for children</b> – Paediatric care with PICU and NICU, child-friendly environment.</li>
+    <li><b>Psychiatric centre</b> – Mental health treatments, psychologists.</li>
+    <li><b>Cancer centre</b> – Prevention programs, early diagnosis, and treatments.</li>
+    <li><b>Pharmacies</b> – Essential drugs at affordable prices.</li>
+    <li><b>Health programs</b> – Teaching and spreading awareness about:
+        <ul>
+            <li>Malnutrition</li>
+            <li>Providing healthy foods</li>
+            <li>Mental health</li>
+        </ul>
+    </li>
+    <li><b>Ambulances</b> – Accessible ambulances for critical situations.</li>
+</ul>
+
+<h3>Health Education & Local Employment</h3>
+<p>Providing opportunities for locals to get educated and trained to become doctors, psychiatrists, and other medical professionals.</p>
+
+<h3>Incorporating Green Areas</h3>
+<p>To improve both mental and physical health, we could incorporate green areas such as parks into our city plan.</p>
+
+<h3>Effects</h3>
+<ul>
+    <li><b>Improvement of health</b> – Fewer sick people, fewer chronic diseases, better treatment of illnesses, lower mortality rate (due to vaccinations and a healthier lifestyle).</li>
+    <li><b>Access to medical care</b> – Including mental health support, maternity care, and more.</li>
+    <li><b>Economic growth and development</b> – More businesses, improved education, increased awareness, and long-term sustainability.</li>
+</ul>
+
+<h3>Health Statistics</h3>
+<blockquote>
+    <p>“Injuries (road traffic injuries, drowning, burns, and falls) rank among the top 3 causes of death and lifelong disability among children aged 5-15 years. In 2012, violence and unintentional injuries killed an estimated 740,000 children under the age of 15, with the latter accounting for 90% of these deaths.</p>
+    <p>Similarly, the worldwide number of overweight children increased from an estimated 31 million in 2000 to 42 million in 2015, including in countries with a high prevalence of childhood undernutrition.”</p>
+</blockquote>
+
+<blockquote>
+    <p>“Pneumonia, diarrhoea, malaria, and HIV are the main causes of death in infants and young children. In the African Region, about 473,000 children die from pneumonia, 300,000 from diarrhoea, and a further 443,000 from malaria every year.”</p>
+</blockquote>
+
+<h2>Police Departments</h2>
+<p>Police departments are not an optional addition as they are necessary. 
+When large amounts of people are in a so-called city for long enough, disagreements and situations are bound to occur. 
+Police departments can be economically friendly by using electric vehicles. 
+They can use renewable energy and many other methods to become more sustainable.</p>
+
+            <h2>Firefighter Departments</h2>
+			<p>Fire stations offer security and safety to residents of a city by quickly responding to emergencies that are out of their control. 
+			By implementing water saving technologies and other technologies that help do their job more sustainably it's possible to be more friendly towards the environment while continuing to fulfil the same job. </p>
         </div>
+		<div class="carousel" data-flickity='{ "wrapAround": true, "autoPlay": 4000, "cellAlign": "center" }'>
+			<div class="carousel-cell"><img src="image9.png" alt="Image 9"></div>
+			<div class="carousel-cell"><img src="image10.png" alt="Image 10"></div>
+			<div class="carousel-cell"><img src="image11.png" alt="Image 11"></div>
+			<div class="carousel-cell"><img src="image12.png" alt="Image 12"></div>
+		</div>
+		<div class="box"></div>
     </main>
     <footer>
+		<<button class="animated-button" onclick="location.href='legacy.html'">
+		  <span>Legacy</span>
+		  <span></span>
+		</button>
         <p>&copy; 2025 Yehor Korzun | Smart and Sustainable Urban Development</p>
     </footer>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.pkgd.min.js"></script>
+	<script>
+    var elem = document.querySelector('.carousel');
+    var flkty = new Flickity(elem, {
+        wrapAround: true, // Enables infinite scrolling
+        autoPlay: 5000,   // Auto-scrolls every 3s
+        cellAlign: 'center'
+    });
+</script>
 </body>
 </html>

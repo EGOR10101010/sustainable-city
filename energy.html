@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sustainable Resources of Energy - Smart City</title>
     <link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.min.css">
 </head>
 <body>
     <header>
@@ -23,20 +24,117 @@
                 <li><a href="water.html">Water Resources</a></li>
                 <li><a href="workplaces.html">Workplaces</a></li>
                 <li><a href="energy.html" class="active">Sustainable Energy</a></li>
-                <li><a href="medical.html">Medical District</a></li>
+                <li><a href="medical.html">Security of Locals</a></li>
                 <li><a href="entertainment.html">Entertainment</a></li>
+				<li><a href="education.html">Education</a></li>
             </ul>
         </li>
+		<li><a href="survey.html">Survey Answers</a></li>
     </ul>
 </nav>
     <main>
         <div class="container">
-            <h2>Sustainable Resources of Energy</h2>
-            <p>Content about sustainable resources of energy in the sustainable city plan will go here.</p>
+           
+<h1>Sustainable Resources of Energy</h1>
+
+<h2>Solar Energy</h2>
+<ul>
+    <li>Solar photovoltaic technology → Converts sunlight directly into electricity to power homes and businesses.</li>
+    <li>Passive solar technology → Provides light and harnesses heat from the sun to warm homes and businesses in winter.</li>
+    <li>Solar water heating → Harnesses heat from the sun to provide hot water for homes and businesses.</li>
+    <li>Solar process heat → Uses solar energy to heat or cool commercial and industrial buildings.</li>
+    <li>Concentrating solar power → Harnesses heat from the sun to provide electricity for large power stations.</li>
+</ul>
+
+<h3>Advantages</h3>
+<ul>
+    <li>Renewable and sustainable</li>
+    <li>Low maintenance costs</li>
+    <li>Job creation (solar industry creates employment opportunities in manufacturing, installation, and maintenance)</li>
+    <li>Scalability and versatility (can be used for small houses, large industries, and remote areas with no grid access)</li>
+    <li>Off-grid power supply (good for rural areas where electricity access is limited)</li>
+</ul>
+
+<h3>Disadvantages</h3>
+<ul>
+    <li>Weather dependent</li>
+    <li>Costly energy storage</li>
+    <li>Requires space</li>
+    <li>Not available at night</li>
+    <li>Production of energy panels involves energy-intensive processes and the use of hazardous materials</li>
+</ul>
+
+<h2>Wind Energy</h2>
+<ul>
+    <li>Onshore wind energy → Micro-wind energy is harnessed through wind turbines with power lower than 100 KW. They are small-scale structures usually used in isolated areas far from the power grid, such as country houses, nature reserves, or alpine refuges.</li>
+    <li>Offshore wind energy → Uses wind turbines installed in the ocean to take advantage of powerful, uninterrupted winds. Offshore wind is more productive than onshore wind due to its consistency.</li>
+</ul>
+
+<h3>Advantages</h3>
+<ul>
+    <li>Renewable and sustainable</li>
+    <li>Low maintenance and operational costs</li>
+    <li>Energy independence (reduces dependence on imported fuels and enhances a city’s energy security)</li>
+    <li>Job creation</li>
+    <li>Space efficiency (the ground beneath turbines can be used for farming or livestock grazing)</li>
+    <li>Offshore potential (can be placed in the ocean, reducing land use)</li>
+</ul>
+
+<h3>Disadvantages</h3>
+<ul>
+    <li>Intermittent energy source (wind is not constant)</li>
+    <li>Noise and aesthetic impact</li>
+    <li>Can harm birds and bats</li>
+    <li>Needs a stable grid and energy storage solutions to manage fluctuations</li>
+</ul>
+
+<h2>Geothermal Energy</h2>
+<p>Geothermal technology extracts heat from within the subsurface of the Earth, which can be used directly for heating and cooling or converted into electricity.</p>
+
+<h3>Advantages</h3>
+<ul>
+    <li>Renewable and sustainable</li>
+    <li>Available 24/7 regardless of weather conditions</li>
+    <li>Low operating costs</li>
+    <li>Efficient land use – Geothermal power plants require less land compared to solar or wind farms</li>
+    <li>Versatile applications – Can be used for electricity generation, heating, cooling, and industrial processes</li>
+    <li>Long lifespan</li>
+    <li>Energy independence – Reduces reliance on imported fuels, improving national energy security</li>
+</ul>
+
+<h3>Disadvantages</h3>
+<ul>
+    <li>Location-specific – Only viable in areas with high underground heat, such as volcanic or tectonic zones</li>
+    <li>Environmental risks – Drilling can release toxic gases (like hydrogen sulfide) and may cause earthquakes</li>
+    <li>Limited scalability – Not all regions have access to high-temperature geothermal reservoirs</li>
+    <li>Potential resource depletion – If not properly managed, geothermal reservoirs can cool down over time</li>
+    <li>Infrastructure challenges – Requires specialized drilling equipment and technology</li>
+    <li>Water usage – Some geothermal systems require significant amounts of water</li>
+</ul>
+
         </div>
+		<div class="carousel" data-flickity='{ "wrapAround": true, "autoPlay": 3000, "cellAlign": "center" }'>
+			<div class="carousel-cell"><img src="image13.png" alt="Image 13"></div>
+			<div class="carousel-cell"><img src="image14.png" alt="Image 14"></div>
+			<div class="carousel-cell"><img src="image15.png" alt="Image 15"></div>
+		</div>
+		<div class="box"></div>
     </main>
     <footer>
+		<button class="animated-button" onclick="location.href='legacy.html'">
+		  <span>Legacy</span>
+		  <span></span>
+		</button>
         <p>&copy; 2025 Yehor Korzun | Smart and Sustainable Urban Development</p>
     </footer>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.pkgd.min.js"></script>
+	<script>
+    var elem = document.querySelector('.carousel');
+    var flkty = new Flickity(elem, {
+        wrapAround: true, // Enables infinite scrolling
+        autoPlay: 5000,   // Auto-scrolls every 3s
+        cellAlign: 'center'
+    });
+</script>
 </body>
 </html>
