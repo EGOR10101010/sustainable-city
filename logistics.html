@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logistics - Smart City</title>
     <link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.min.css">
 </head>
 <body>
     <header>
@@ -51,6 +52,13 @@ By using energy efficient port operations and making use of hybrid or electric v
 <p>Finance departments give all residents of a city access to their funds. 
 To be more energy efficient banks can use renewable energy and energy efficient lighting to reduce their carbon footprint. </p>
         </div>
+				<div class="carousel" data-flickity='{ "wrapAround": true, "autoPlay": 4000, "cellAlign": "center" }'>
+			<div class="carousel-cell"><img src="image20.png" alt="Image 20"></div>
+			<div class="carousel-cell"><img src="image21.png" alt="Image 21"></div>
+			<div class="carousel-cell"><img src="image22.png" alt="Image 22"></div>
+			<div class="carousel-cell"><img src="image23.png" alt="Image 23"></div>
+		</div>
+		<div class="box"></div>
     </main>
     <footer>
 		<button class="animated-button" onclick="location.href='legacy.html'">
@@ -79,6 +87,14 @@ To be more energy efficient banks can use renewable energy and energy efficient 
         });
     });
     </script>
-	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.pkgd.min.js"></script>
+	<script>
+    var elem = document.querySelector('.carousel');
+    var flkty = new Flickity(elem, {
+        wrapAround: true, // Enables infinite scrolling
+        autoPlay: 5000,   // Auto-scrolls every 3s
+        cellAlign: 'center'
+    });
+</script>
 </body>
 </html>

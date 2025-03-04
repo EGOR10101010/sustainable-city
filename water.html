@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Water Resources - Smart City</title>
     <link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.min.css">
 </head>
 <body>
     <header>
@@ -36,6 +37,10 @@
             <h2>Water Resources</h2>
             <p>A water treatment plant purifies wastewater which allows the water to be reused, thus reducing pollution while all being eco-friendly and energy efficient.</p>
         </div>
+		<div class="carousel" data-flickity='{ "wrapAround": true, "autoPlay": 1000, "cellAlign": "center" }'>
+			<div class="carousel-cell"><img src="image25.png" alt="Image 25"></div>
+		</div>
+		<div class="box"></div>
     </main>
     <footer>
 		<button class="animated-button" onclick="location.href='legacy.html'">
@@ -44,5 +49,14 @@
 		</button>
         <p>&copy; 2025 Yehor Korzun | Smart and Sustainable Urban Development</p>
     </footer>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.pkgd.min.js"></script>
+	<script>
+    var elem = document.querySelector('.carousel');
+    var flkty = new Flickity(elem, {
+        wrapAround: true, // Enables infinite scrolling
+        autoPlay: 5000,   // Auto-scrolls every 3s
+        cellAlign: 'center'
+    });
+</script>
 </body>
 </html>

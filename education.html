@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Education</title>
     <link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.min.css">
 </head>
 <body>
     <header>
@@ -39,6 +40,12 @@
 			Access to school will also be easy using the public transport. Using modern technologies, we also help monitor school to ensure safety and to prevent any unwanted conflicts. 
 			We have buildings for kindergarten, primary school, secondary school and university. </p>
         </div>
+		<div class="carousel" data-flickity='{ "wrapAround": true, "autoPlay": 2000, "cellAlign": "center" }'>
+			<div class="carousel-cell"><img src="image30.png" alt="Image 30"></div>
+			<div class="carousel-cell"><img src="image31.png" alt="Image 31"></div>
+
+		</div>
+		<div class="box"></div>
     </main>
     <footer>
 		<button class="animated-button" onclick="location.href='legacy.html'">
@@ -47,5 +54,14 @@
 		</button>
         <p>&copy; 2025 Yehor Korzun | Smart and Sustainable Urban Development</p>
     </footer>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.pkgd.min.js"></script>
+	<script>
+    var elem = document.querySelector('.carousel');
+    var flkty = new Flickity(elem, {
+        wrapAround: true, // Enables infinite scrolling
+        autoPlay: 5000,   // Auto-scrolls every 3s
+        cellAlign: 'center'
+    });
+</script>
 </body>
 </html>

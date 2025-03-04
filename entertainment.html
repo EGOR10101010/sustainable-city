@@ -62,6 +62,14 @@ Efforts to reduce the carbon footprint and be energy efficient can make these pl
 They promote biodiversity, help preserve green areas, improve air quality and much more.
 They also promote going outdoors and offer a large area for recreational activities. </p> 
         </div>
+		<div class="carousel" data-flickity='{ "wrapAround": true, "autoPlay": 5000, "cellAlign": "center" }'>
+			<div class="carousel-cell"><img src="image40.png" alt="Image 40"></div>
+			<div class="carousel-cell"><img src="image41.png" alt="Image 41"></div>
+			<div class="carousel-cell"><img src="image42.png" alt="Image 42"></div>
+			<div class="carousel-cell"><img src="image43.png" alt="Image 43"></div>
+			<div class="carousel-cell"><img src="image44.png" alt="Image 44"></div>
+		</div>
+		<div class="box"></div>
     </main>
     <footer>
 		<button class="animated-button" onclick="location.href='legacy.html'">
@@ -70,5 +78,14 @@ They also promote going outdoors and offer a large area for recreational activit
 		</button>
         <p>&copy; 2025 Yehor Korzun | Smart and Sustainable Urban Development</p>
     </footer>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.pkgd.min.js"></script>
+	<script>
+    var elem = document.querySelector('.carousel');
+    var flkty = new Flickity(elem, {
+        wrapAround: true, // Enables infinite scrolling
+        autoPlay: 5000,   // Auto-scrolls every 3s
+        cellAlign: 'center'
+    });
+</script>
 </body>
 </html>
